@@ -57,17 +57,6 @@ This is a manual step to pre-install Windows on the Boot Camp partition. You can
    - `index:6` is usually for Windows Pro version from `install.wim` file. You can choose other version you like.
    - To show windows version, run command: `dism /get-wiminfo /wimfile:D:\sources\install.wim`
 
-### Optional: Apply `autounattend.xml` During First Boot After Applying the Image
-
-Once you’ve used `DISM /apply-image` to deploy the Windows image to the Boot Camp partition (e.g., `E:\`), manually copy the `autounattend.xml` file into a location where Windows Setup can detect it on the first boot.
-
-- The `autounattend.xml` file can be used to preconfigure settings like bypassing internet requirements (useful for Windows 11), removing default apps, and other initial setup preferences.
-- Copy `autounattend.xml` to the following directory inside the applied Windows image:
-  ```plaintext
-  E:\Windows\Panther\
-  ```
-- Windows Setup checks this folder on the first boot to apply the unattended configuration automatically.
-
 ### Step 5: Configure the Bootloader
 
 After applying the Windows image, set up the bootloader on the Boot Camp partition:
